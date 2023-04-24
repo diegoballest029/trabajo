@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;  
+}
+html {
+    height: 100vh;
+}
+body {
+    min-height: 100vh;
+}
+.grid-container{
+    display: grid;
+    gap: 0.3px;
+    grid-template-areas: 
+    "logo"
+    "header"
+    "menu"
+    "main"
+    "footer";
+}
+.grid-container > * {
+    padding: 1px; 
+}
+.header {
+    grid-area: header;
+}
+.logo {
+    grid-area: logo;
+}
+.logo img {
+    width: 45px;
+}
+.menu {
+    grid-area: menu;
+}
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+}
+@media (min-width:600px){
+    .grid-container{
+        grid-template: 
+        "logo header" 50px
+        "menu menu" 50px
+        "main main" auto
+        "footer footer" 80px/
+        50px auto;
+    }
+}
+
+    
+
+
